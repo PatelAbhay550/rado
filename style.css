@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 200vh;
     box-sizing: border-box; /* add this line */
 }
 
@@ -146,6 +147,7 @@ hr {
     /* Adjust main padding and font sizes */
     .main {
       padding: 40px 100px;
+       width: 200vh;
       width: 100vw;
     }
     .content {
@@ -168,6 +170,7 @@ hr {
     /* Adjust main padding, font sizes and logo size */
     .main {
       padding: 30px 50px;
+       width: 200vh;
     }
     .content {
       font-size: 6vh;
