@@ -1,28 +1,68 @@
+/* Global styles */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
-
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "space mono", monospace;}
-body {
-    overflow-x: hidden;
-  }
-
-
-.main{
-    background: linear-gradient(#1c1c1c,#323232);
-    position: relative;
-    align-items: center;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 200vh;
-    box-sizing: border-box; /* add this line */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    background: linear-gradient(#1c1c1c,#323232);
+}
 
-.main::before {
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+ul li {
+    position: relative;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.9) url(watch5.png);
+    background-position: center;
+    background-blend-mode: darken;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    width: 80px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.navigation li {
+    margin: 0 10px;
+    
+    background-color: white;
+}
+
+/* Content styles */
+.main {
+    
+    padding-top: 100px;
+}
+.main::before{
   content: "RADO";
   position: absolute;
   color: rgba(255, 255, 255, 0.05);
@@ -32,161 +72,109 @@ body {
   transform: translate(-50%, -50%);
   font-weight: 700;
 }
-
 .content {
-  color: white;
-  font-size: 10vh;
+    padding: 50px;
+    color: white;
+    text-align: center;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  background: rgba(0, 0, 0, 0.6) url(watch5.png);
-  background-position: center;
-  background-blend-mode: darken;
-  border-radius: 30px;
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.logo {
-  max-width: 80px;
-  transform: rotate(60deg);
-  image-rendering: optimizeQuality;
-  border-radius: 20px;
-  mix-blend-mode: screen;
-}
-
-.navigation {
-  display: flex;
-}
-
-.navigation li {
-  list-style: none;
-}
-
-.navigation li a {
-  position: relative;
-  color: white;
-  margin-left: 40px;
-  font-size: 5vh;
-  text-decoration: none;
-  transition: 0.30s;
-}
-
-.navigation li a:hover {
-  color: red;
-}
-
-mark {
-  background-color: rgb(34, 32, 32);
-  color: white;
-  border-radius: 30px;
-}
-
-.btn {
-  text-decoration: none;
-  color: white;
-  font-size: 10vh;
-  font-weight: bold;
-  letter-spacing: 30px;
-  top: 50%;
+h2 span {
+    color: #d6324a;
 }
 
 .watch {
-  position: relative;
-  top: 50%;
-  left: 10%;
+    position: relative;
+    top: 50%;
+    width: 100%;
+    max-width: 500px;
+    margin: 90px 0;
+    left: 10%;
 }
 
-.content h1 {
-  color: white;
-  padding-top: 60px;
-  font-size: 15vh;
-  left: 40%;
-  text-align: center;
+.btn {
+    display: block;
+    width: 200px;
+    padding: 15px;
+    background-color: #d6324a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+mark {
+    background-color: rgb(34, 32, 32);
+    color: white;
+    border-radius: 30px;
+  }
+h1{
+    text-align: center;
+}
+.btn:hover {
+    background-color: #b1253a;
 }
 
-.content p {
-  color: white;
-  transition: 7s ease-in-out;
-  font-size: 3vh;
-  font-weight: bold;
-  font-family: "Ubuntu", sans-serif;
-}
-
-hr {
-  color: white;
-  height: 10px;
-  width: 200vh;
-  top: 20%;
-  background-color: white;
-  font-weight: bold;
-}
-
-/* Large screens */
-@media only screen and (min-width: 1200px) {
-    /* Adjust main padding and logo size */
-    .main {
-      padding: 50px 150px;
-      box-sizing: border-box;
-      width: 100vw;
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        
     }
+    
     .logo {
-      max-width: 100px;
+        width: 50px;
     }
-  }
-  
-  /* Medium screens */
-  @media only screen and (max-width: 1199px) and (min-width: 768px) {
-    /* Adjust main padding and font sizes */
-    .main {
-      padding: 40px 100px;
-       width: 200vh;
-      width: 100vw;
+
+    .navigation {
+        width: 60%;
+        
     }
+    
     .content {
-      font-size: 8vh;
+        padding: 30px;
     }
-    .content h1 {
-        font-size: 5vh;
-        text-align: center;
+    
+    h2 {
+        font-size: 28px;
     }
-    .navigation li a {
-      font-size: 3vh;
+    
+    .watch {
+        margin: 30px 0;
     }
+    
     .btn {
-      font-size: 8vh;
+        width: 150px;
+        padding: 10px;
+        font-size: 14px;
     }
-  }
-  
-  /* Small screens */
-  @media only screen and (max-width: 767px) {
-    /* Adjust main padding, font sizes and logo size */
-    .main {
-      padding: 30px 50px;
-       width: 200vh;
+}
+
+@media only screen and (max-width: 480px) {
+    .navigation {
+        display: none;
     }
+    
     .content {
-      font-size: 6vh;
+        padding: 20px;
     }
-    .content h1 {
-      font-size: 5vh;
-      text-align: center;
+    
+    h2 {
+        font-size: 24px;
     }
-    .navigation li a {
-      font-size: 2vh;
+    
+    .watch {
+        margin: 20px 0;
     }
+    
     .btn {
-      font-size: 6vh;
+        width: 120px;
+        padding: 5px;
+        font-size: 12px;
     }
-    .logo {
-      max-width: 60px;
-    }
-  }
-  
+}
