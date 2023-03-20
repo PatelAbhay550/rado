@@ -74,10 +74,12 @@ header {
 }
 .content {
     padding: 50px;
-    color: white;
+    background-color: rgb(34, 32, 32);
     text-align: center;
 }
-
+.content p{
+    color: white;
+}
 h2 {
     font-size: 36px;
     margin-bottom: 20px;
